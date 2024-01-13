@@ -10,6 +10,11 @@ import {StyleSheet} from 'react-native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import RootNavigator from './navigations';
 import { ReactQueryProvider } from './utils/ReactQueryProvider';
+import reactotron from './config/reactotron';
+
+if (__DEV__) {
+  reactotron.connect();
+}
 
 function App(): React.JSX.Element {
   return (

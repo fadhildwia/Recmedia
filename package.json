@@ -8,9 +8,11 @@
     "clean": "watchman watch-del-all && rm -rf node_modules && rm -rf ios/Pods",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "build:android": "cd android && ./gradlew assembleRelease && cd .."
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.21.0",
     "@react-navigation/bottom-tabs": "^6.5.11",
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/native-stack": "^6.9.17",
@@ -40,6 +42,7 @@
     "prettier": "2.8.8",
     "react-native-svg-transformer": "^1.3.0",
     "react-test-renderer": "18.2.0",
+    "reactotron-react-native": "^5.0.4",
     "typescript": "5.0.4"
   },
   "engines": {
